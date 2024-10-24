@@ -1,0 +1,146 @@
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffe6f0; /* Light pink background */
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  z-index: 1;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.image-row img {
+  width: 200px; /* Adjust the width as needed */
+  height: auto;
+  margin: 0 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Specific styles for side images */
+.side-image {
+  /* Add any specific styles for side images here */
+}
+
+/* Adjust the GIF styling if necessary */
+#gif {
+  width: 250px;
+  height: auto;
+  margin-bottom: 0; /* Adjusted as per your comment */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  margin: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+#yesButton {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e72);
+  color: white;
+}
+
+#yesButton:hover {
+  background: linear-gradient(45deg, #ff8e72, #ff6b6b);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#noButton {
+  background: linear-gradient(45deg, #f44336, #e57373);
+  color: white;
+}
+
+#noButton:hover {
+  background: linear-gradient(45deg, #e57373, #f44336);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for small hearts */
+.small-heart {
+  position: fixed;
+  bottom: -50px;
+  width: var(--heart-size, 20px);
+  height: var(--heart-size, 20px);
+  background-color: var(--heart-color, #ff6b6b);
+  transform: rotate(-45deg);
+  opacity: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.5));
+}
+
+.small-heart::before,
+.small-heart::after {
+  content: "";
+  position: absolute;
+  width: var(--heart-size, 20px);
+  height: var(--heart-size, 20px);
+  background-color: var(--heart-color, #ff6b6b);
+  border-radius: 50%;
+}
+
+.small-heart::before {
+  top: calc(-1 * var(--heart-size, 20px) / 2);
+  left: 0;
+}
+
+.small-heart::after {
+  top: 0;
+  left: calc(var(--heart-size, 20px) / 2);
+}
+
+/* Animation for hearts floating up */
+@keyframes floatUpSlowly {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 600px) {
+  .image-row {
+    flex-direction: column;
+  }
+  .image-row img {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "telegram-bot-website",
+  "version": "1.0.0",
+  "description": "A website that sends a Telegram message when the 'Yes' button is clicked",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1"
+  }
+}
+
